@@ -1,3 +1,30 @@
+text_settings = {
+    {
+        x=47, y=75,
+        font='Impact',
+        font_size='12',
+        font_colour=0xcccccc,
+        font_alpha=1,
+        text="Time"
+    },
+    {
+        x=178, y=75,
+        font='Impact',
+        font_size='12',
+        font_colour=0xcccccc,
+        font_alpha=1,
+        text="CPU"
+    },
+    {
+        x=300, y=75,
+        font='Impact',
+        font_size='12',
+        font_colour=0xcccccc,
+        font_alpha=1,
+        text="Memory"
+    }
+}
+
 settings = {
     {
         comment='Hours',

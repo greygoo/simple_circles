@@ -47,18 +47,26 @@ function draw_ring(cr, t, pt)
     cairo_stroke(cr);
 end
 
---function draw_text(cr, pt)
---    --Font
---    cairo_select_font_face (
---        cr,
---        "Impact",
---        CAIRO_FONT_SLANT_NORMAL,
---        CAIRO_FONT_WEIGHT_NORMAL
---    );
---    cairo_set_font_size (cr, 172);
---    cairo_set_source_rgba (cr, 0.7, 0.6, 0.3, 1);
---
---    --Time
---    cairo_move_to (cr, 0, 144);
---    cairo_show_text (cr, conky_parse('${time %H:%M}'));
---end
+function draw_text(cr, pt)
+    local x,y = pt['x'], pt['y'];
+    local font = pt['font'];
+    local size = pt['font_size'];
+    local colour = pt['font_colour'];
+    local alpha = pt['font_alpha'];
+    local text = pt['text'];
+
+
+    --Font
+    cairo_select_font_face (
+        cr,
+        font,
+        CAIRO_FONT_SLANT_NORMAL,
+        CAIRO_FONT_WEIGHT_NORMAL
+    );
+    cairo_set_font_size (cr, size);
+    cairo_set_source_rgba (cr, rgb_to_r_g_b(colour, alpha));
+
+    --Time
+    cairo_move_to (cr, x, y);
+    cairo_show_text (cr, text);
+end

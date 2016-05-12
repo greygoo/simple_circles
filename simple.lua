@@ -36,5 +36,8 @@ function conky_load_content()
         for i in pairs(settings) do
             draw_rings(cr, settings[i]);
         end
+        for i in pairs(text_settings) do
+            draw_text(cr, text_settings[i]);
+        end
     end
 end
