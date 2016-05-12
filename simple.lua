@@ -33,8 +33,8 @@ function conky_load_content()
     update_num=tonumber(updates);
 
     if update_num>5 then
-        for i in pairs(settings) do
-            draw_rings(cr, settings[i]);
+        for i in pairs(circle_settings) do
+            draw_rings(cr, circle_settings[i]);
         end
         for i in pairs(text_settings) do
             draw_text(cr, text_settings[i]);

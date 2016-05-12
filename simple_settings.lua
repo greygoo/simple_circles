@@ -25,7 +25,7 @@ text_settings = {
     }
 }
 
-settings = {
+circle_settings = {
     {
         comment='Hours',
         name='time',
